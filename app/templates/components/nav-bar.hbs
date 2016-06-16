@@ -12,18 +12,22 @@
     <div id="navbar" class="navbar-collapse collapse">
 
       <ul class="nav navbar-nav navbar-right">
+      {{#if session.isAuthenticated}}
+
         <li>
           <a href="lightbox" class="nav-item nav-link">Lightbox</a>
         </li>
         <li>
           <a href="account" class="nav-item nav-link">Account</a>
         </li>
+      {{else}}
         <li>
-          <a href="account" class="nav-item nav-link">Sign up</a>
+          <a href="signup" class="nav-item nav-link">Sign up</a>
         </li>
         <li>
-          <a href="account" class="nav-item nav-link">Sign in</a>
+          <a href="login" class="nav-item nav-link">Sign in</a>
         </li>
+      {{/if}}
       </ul>
       <!-- <form class="navbar-form navbar-right">
         <input type="text" class="form-control" placeholder="Search...">
