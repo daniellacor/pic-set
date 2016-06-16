@@ -3,9 +3,7 @@ import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
-  imgURL: attr('string'),
-  shutterSpeed: attr('integer'),
-  aperture: attr('integer'),
-  score: attr('integer'),
-  lesson: belongsTo('lesson')
+  score: 'integer',
+  lesson: belongsTo('lesson'),
+  user: belongsTo('user')
 });
