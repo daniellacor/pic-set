@@ -3,7 +3,9 @@ import attr from 'ember-data/attr';
 import { hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
-  topic: attr('string'),
-  description: attr('string'),
-  flashcards: hasMany('flashcard')
+  name: attr('string'),
+  username: attr('string'),
+  password: attr('string'),
+  lightboxes: hasMany('lightbox'),
+  scores: hasMany('score')
 });
