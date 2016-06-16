@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('account');
   this.route('intro');
   this.route('lessons', function() {
-    this.route('lesson');
+    this.route('lesson', {path: ':lesson_id'});
   });
   this.route('user');
   this.route('score');
