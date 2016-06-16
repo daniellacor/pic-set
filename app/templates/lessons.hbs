@@ -1,1 +1,7 @@
-{{outlet}}
+
+<div class="lessons-index">
+  {{#each model as |lesson|}}
+  <h1>{{lesson.topic}}</h1>
+  <h3>{{lesson.description}}</h3>
+  {{/each}}
+</div>
