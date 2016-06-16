@@ -12,9 +12,11 @@ Router.map(function() {
   this.route('lessons', function() {
     this.route('lesson', { path: '/:lesson_id' }) ;
   });
-  this.route('user');
+  this.route('user', { path: '/:user_id' });
   this.route('score');
   this.route('flashcard');
+  this.route('login');
+  this.route('signup');
 });
 
 export default Router;
