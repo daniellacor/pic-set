@@ -10,6 +10,9 @@ Router.map(function() {
   this.route('account');
   this.route('intro');
   this.route('lessons');
+  this.route('user');
+  this.route('score');
+  this.route('flashcard');
 });
 
 export default Router;
