@@ -6,6 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('lightbox');
+  this.route('account');
+  this.route('intro');
+  this.route('lessons');
 });
 
 export default Router;
