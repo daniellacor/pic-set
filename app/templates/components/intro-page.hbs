@@ -1,0 +1,11 @@
+<!-- Example row of columns -->
+<div class="row">
+  {{#each lessons as |lesson|}}
+  <div class="col-md-4">
+    <h2>{{lesson.topic}}</h2>
+    <p>{{lesson.description}}</p>
+  </div>
+  {{/each}}
+</div>
+<p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+<hr>

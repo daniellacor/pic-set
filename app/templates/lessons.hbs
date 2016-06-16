@@ -1,1 +1,12 @@
-{{outlet}}
+{{#if isLoggedIn }}
+<div class="lessons-index">
+  {{#each model as |lesson|}}
+  <h1>{{lesson.topic}}</h1>
+  <h2>{{lesson.description}}</h2>
+  {{/each}}
+</div>
+{{else}}
+
+{{intro-page lessons=model}}
+
+{{/if}}
