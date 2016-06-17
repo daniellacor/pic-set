@@ -4,25 +4,25 @@ import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mi
 const { service } = Ember.inject;
 
 export default Ember.Route.extend(ApplicationRouteMixin, {
- sessionAccount: service('session-account'),
+  sessionAccount: service('session-account'),
 
- beforeModel() {
-   return this._loadCurrentUser();
- },
+  beforeModel() {
+    return this._loadCurrentUser();
+  },
 
- sessionAuthenticated() {
-   this._loadCurrentUser().then(()=>{
-     this.transitionTo('/');
-   }).catch(() => this.get('session').invalidate());
- },
+  sessionAuthenticated() {
+    this._loadCurrentUser().then(()=>{
+      this.transitionTo('/');
+    }).catch(() => this.get('session').invalidate());
+  },
 
- _loadCurrentUser() {
-   return this.get('sessionAccount').loadCurrentUser();
- },
+  _loadCurrentUser() {
+    return this.get('sessionAccount').loadCurrentUser();
+  },
 
- actions: {
-   invalidateSession: function() {
-       this.get('session').invalidate();
-   }
- }
+  actions: {
+    invalidateSession: function() {
+        this.get('session').invalidate();
+    }
+  }
 });

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export function sessionObjectFormatter(sessionObject) {
+  debugger
  return JSON.stringify(sessionObject);
 }
 
