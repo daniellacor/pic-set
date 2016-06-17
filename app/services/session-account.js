@@ -22,10 +22,6 @@ export default Ember.Service.extend({
         failure: function(){
           reject()
         }})
-       // return this.get('store').findRecord('user', 'current-user').then((user) => {
-       //   this.set('account', user);
-       //   resolve();
-       // }, reject);
      } else {
        resolve();
      }

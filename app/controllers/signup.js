@@ -5,8 +5,8 @@ export default Ember.Controller.extend({
 
  actions: {
    save(user){
-     user.save().then(()=>{
-       var credentials = {identification: user.get('email'), password: user.get('password')},
+     user.save().then((user)=>{
+       var credentials = {email: user.get('email'), password: user.get('password')},
          authenticator = 'authenticator:jwt';
 
        this.get('session').authenticate(authenticator, credentials).catch((reason)=>{
@@ -20,3 +20,17 @@ export default Ember.Controller.extend({
    }
  }
 });
+
+
+// let name = this.get('user.name')
+// let email = this.get('user.email')
+// let password = this.get('user.password')
+// let passwordConfirmation = this.get('user.passwordConfirmation')
+//
+// var user = this.store.createRecord('user', {
+//   name: name,
+//   email: email,
+//   password: password,
+//   passwordConfirmation: passwordConfirmation
+// });
+// debugger

@@ -20,10 +20,4 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     return this.get('sessionAccount').loadCurrentUser();
   },
 
-  actions: {
-    invalidateSession: function() {
-        this.get('session').invalidate();
-        this.transitionTo('/')
-    }
-  }
 });
