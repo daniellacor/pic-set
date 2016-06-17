@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Base.extend({
  session: Ember.inject.service(),
  authorize(data, block) {
-  debugger
    if (Ember.testing) {
      block('Authorization', 'Bearer beyonce');
    }
@@ -13,4 +12,3 @@ export default Base.extend({
    }
  }
 });
-
