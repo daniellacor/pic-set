@@ -1,0 +1,30 @@
+<div>
+  {{#each flashcards as |flashcard|}}
+    <img class="img-responsive" src="{{flashcard.imgURL}}">
+    <div class="camera-settings">
+      <div class="aperture-setting">
+        <h4>Aperture:</h4> {{ui-slider
+          defaultValue=50
+          ticks='0,1,2,3,4,5,6,7'
+          ticksLabels='1.4, 2.0, 2.8, 4.0, 5.6, 8, 16, 32'
+          ticksSnapBounds=15
+          tooltip='hide'
+          max=80
+        }}
+      </div>
+      <div class="shutter-speed-setting">
+        <h4>Shutter Speed: </h4>{{ui-slider
+          ticks="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
+          ticksLabels="30 sec, 15, 1, 1/2, 1/4, 1/8, 1/15, 1/30, 1/60, 1/125 ,1/250, 1/500, 1/1000, 1/2000, 1/4000, 1/8000"
+          ticksSnapBounds=15
+          tooltip='hide'
+        }}
+      </div>
+    </div>
+    <br><br>
+    <button class="btn btn-primary"{{action 'takePhoto'}}>Snap the photo!</button>
+
+    <br><br>
+  {{/each}}
+  {{yield}}
+</div>
