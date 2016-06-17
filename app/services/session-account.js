@@ -8,16 +8,15 @@ export default Ember.Service.extend({
 
  loadCurrentUser() {
    return new RSVP.Promise((resolve, reject) => {
-    debugger;
+     let that = this
      const token = this.get('session.data.authenticated.token');
      if (!Ember.isEmpty(token)) {
-      debugger;
       $.ajax({
         headers: {'Authorization': `Bearer ${token}`},
         url: 'http://localhost:3000/api/v1/users/current-user',
         method: 'GET', dataType: 'json',
         success: function(user){
-           this.set('account', user);
+           that.set('account', user);
            resolve()
         },
         failure: function(){
