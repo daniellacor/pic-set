@@ -35,7 +35,6 @@ export default Base.extend({
        const { jwt } = response;
        // Wrapping aync operation in Ember.run
        run(() => {
-        debugger;
          resolve({
            token: jwt
          });
@@ -49,7 +48,6 @@ export default Base.extend({
    });
  },
  invalidate(data) {
-  debugger;
    return Promise.resolve(data);
  }
 });

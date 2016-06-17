@@ -5,11 +5,10 @@ export default Ember.Controller.extend({
  actions: {
    authenticate: function(credentials) {
      var credentials = credentials,
-       authenticator = 'authenticator:jwt'
+     authenticator = 'authenticator:jwt'
      this.get('session').authenticate(authenticator, credentials).catch((reason)=>{
        this.set('errorMessage', reason.responseJSON.errors || reason);
      }).then(()=>{
-      debugger;
      });
    }
  }
