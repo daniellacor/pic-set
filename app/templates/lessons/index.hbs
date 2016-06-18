@@ -1,12 +1,10 @@
-{{#if isLoggedIn }}
   <div class="lessons-index">
     {{#each model as |lesson|}}
-    <h1>{{lesson.topic}}</h1>
-    <h2>{{lesson.description}}</h2>
+      {{#link-to 'lessons.lesson' lesson}}
+      <div class="lesson-container">
+        <h1>{{link-to lesson.topic 'lessons.lesson' lesson}}</h1>
+        <h2>{{lesson.description}}</h2>
+      </div>
+      {{/link-to}}
     {{/each}}
   </div>
-{{else}}
-
-  {{intro-page lessons=model}}
-
-{{/if}}
