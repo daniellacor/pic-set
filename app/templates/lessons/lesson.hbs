@@ -1,4 +1,4 @@
 <h1>{{model.topic}}</h1>
 <p>Use the sliders to adjust the camera settings. Try to match what you think the picture settings were!</p>
-
+  {{flashcard-container takePhotograph=(action 'judge') flashcard=model.flashcards.get('firstObject')}}
 {{outlet}}
