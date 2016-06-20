@@ -1,5 +1,15 @@
-<h1>{{model.topic}}</h1>
-<p>Use the sliders to adjust the camera settings. Try to match what you think the picture settings were!</p>
+<div class="row">
+  <div class="col-sm-6">
+    <h1>{{model.topic}}</h1>
+    <p>Use the sliders to adjust the camera settings.<br>Try to match what you think the picture settings were!</p>
+  </div>
+
+  <div class="col-sm-6">
+    {{score-board model=model}}
+  </div>
+</div>
+
+
 
 <div class="flashcard-container">
   {{flashcard-container flashcards=model.flashcards}}
