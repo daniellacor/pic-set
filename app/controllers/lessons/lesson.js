@@ -13,8 +13,6 @@ export default Ember.Controller.extend({
           user.set('score', points);
           user.save();
         }
-
-
     }
   }
 });
