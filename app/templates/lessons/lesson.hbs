@@ -9,9 +9,10 @@
   </div>
 </div>
 
-
 <div class="flashcard-container">
-  {{flashcard-container flashcards=model.flashcards}}
+#{{#each model.flashcards as |flashcard|}}
+  {{flashcard-container flashcard=flashcard}}
+{{/each}}
 </div>
 
 
