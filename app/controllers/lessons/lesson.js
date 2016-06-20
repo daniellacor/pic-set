@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service('session-account'),
   actions: {
     judge(settings) {
       var points = 0
       var shutterDiff = settings.userShutter - settings.shutter
       var user = this.get('session.account')
-      debugger
       switch(true) {
           case 0:
             points += 10;
@@ -46,16 +46,17 @@ export default Ember.Controller.extend({
           default:
             points += 0
       }
-    },
-    // score(points){
-    //   session: Ember.inject.service('session-account'),
-    //     var account = this.get('session.account.data')
-    //     var user_id = account.id
-    //     this.store.findRecord('user', user_id).then(function(score){
-    //       user.set('score', points);
-    //       user.save();
-    //     }
-    // }
+      this.toggleProperty('isSnapped');
+      this.score(points);
     }
-  }
+  },
+  score: function(points) {
+      var account = this.get('session.account.data')
+      var user_id = account.id
+      this.store.findRecord('user', 1).then(function(user){
+        user.set('score', points);
+        user.save();
+      })
+  },
+  isSnapped: false
 });

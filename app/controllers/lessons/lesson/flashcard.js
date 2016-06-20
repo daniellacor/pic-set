@@ -1,15 +1,12 @@
 import Ember from 'ember';
-export default Ember.Controller.extend({
-<<<<<<< HEAD:app/controllers/flashcards/flashcard.js
 
-=======
+export default Ember.Controller.extend({
   session: Ember.inject.service('session-account'),
   actions: {
     judge(settings) {
       var points = 0
       var shutterDiff = settings.userShutter - settings.shutter
       var user = this.get('session.account')
-      debugger
       switch(true) {
           case 0:
             points += 10;
@@ -51,5 +48,4 @@ export default Ember.Controller.extend({
       }
     }
   }
->>>>>>> cc3813da4747feacfbffc61988ce9d69297633af:app/controllers/lessons/lesson/flashcard.js
-});
+})
