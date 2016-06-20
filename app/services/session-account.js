@@ -4,7 +4,6 @@ const { inject: { service }, RSVP } = Ember;
 
 export default Ember.Service.extend({
  session: service('session'),
- store: service(),
 
  loadCurrentUser() {
    return new RSVP.Promise((resolve, reject) => {
