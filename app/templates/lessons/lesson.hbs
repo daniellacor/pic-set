@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-6">
-    <h1>{{model.topic}}</h1>
-    <p>Use the sliders to adjust the camera settings.<br>Try to match what you think the picture settings were!</p>
+    <h1>{{model.lesson.topic}}</h1>
+    <p>Use the sliders to adjust the camera settings. Try to match what you think the picture settings were!</p>
   </div>
 
   <div class="col-sm-6">
@@ -10,10 +10,7 @@
 </div>
 
 <div class="flashcard-container">
-#{{#each model.flashcards as |flashcard|}}
-  {{flashcard-container flashcard=flashcard}}
-{{/each}}
+  {{flashcard-container takePhotograph=(action 'judge') flashcard=model.flashcards}}
+  <button class="btn btn-primary" {{action 'nextFlashcard'}}>Next Flashcard</button>
 </div>
-
-
 {{outlet}}

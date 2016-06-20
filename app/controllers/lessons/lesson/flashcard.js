@@ -1,6 +1,9 @@
 import Ember from 'ember';
-
 export default Ember.Controller.extend({
+<<<<<<< HEAD:app/controllers/flashcards/flashcard.js
+
+=======
+  session: Ember.inject.service('session-account'),
   actions: {
     judge(settings) {
       var points = 0
@@ -46,16 +49,7 @@ export default Ember.Controller.extend({
           default:
             points += 0
       }
-    },
-    // score(points){
-    //   session: Ember.inject.service('session-account'),
-    //     var account = this.get('session.account.data')
-    //     var user_id = account.id
-    //     this.store.findRecord('user', user_id).then(function(score){
-    //       user.set('score', points);
-    //       user.save();
-    //     }
-    // }
     }
   }
+>>>>>>> cc3813da4747feacfbffc61988ce9d69297633af:app/controllers/lessons/lesson/flashcard.js
 });
