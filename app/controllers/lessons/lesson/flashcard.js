@@ -1,10 +1,12 @@
 import Ember from 'ember';
 export default Ember.Controller.extend({
-  session: Ember.inject.service('session'),
+  session: Ember.inject.service('session-account'),
   actions: {
     judge(settings) {
       var points = 0
       var shutterDiff = settings.userShutter - settings.shutter
+      var user = this.get('session.account')
+      debugger
       switch(true) {
           case 0:
             points += 10;

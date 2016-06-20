@@ -2,14 +2,15 @@
   <img class="img-responsive" src="{{flashcard.imgURL}}">
   <form {{action 'submit' on='submit'}} >
     <h4>Aperture:</h4>
-    {{ui-slider
-      id='aperture'
-      ticks='0,1,2,3,4,5,6,7,8,9'
-      ticksLabels='1.4, 2.0, 2.8, 4.0, 5.6, 8, 11, 16, 22, 32'
-      ticksSnapBounds=15
-      tooltip='hide'
-      max=80
-    }}
+      {{ui-slider
+
+        id='aperture'
+        ticks='0,1,2,3,4,5,6,7,8,9'
+        ticksLabels='1.4, 2.0, 2.8, 4.0, 5.6, 8, 11, 16, 22, 32'
+        ticksSnapBounds=15
+        tooltip='hide'
+        max=9
+      }}
     <h4>Shutter Speed: </h4>{{ui-slider
       id='shutter'
       ticks="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14"

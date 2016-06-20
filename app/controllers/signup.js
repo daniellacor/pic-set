@@ -20,17 +20,3 @@ export default Ember.Controller.extend({
    }
  }
 });
-
-
-// let name = this.get('user.name')
-// let email = this.get('user.email')
-// let password = this.get('user.password')
-// let passwordConfirmation = this.get('user.passwordConfirmation')
-//
-// var user = this.store.createRecord('user', {
-//   name: name,
-//   email: email,
-//   password: password,
-//   passwordConfirmation: passwordConfirmation
-// });
-// debugger
