@@ -50,7 +50,6 @@ export default Ember.Controller.extend({
     nextFlashcard() {
       debugger
       var thisId = this.get('model.id')
-      var
       isSnapped: false
     }
   }
