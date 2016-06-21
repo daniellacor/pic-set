@@ -5,7 +5,7 @@
   </div>
 
   <div class="col-sm-6">
-    {{score-board score=model.score}}
+    {{score-board model=model}}
   </div>
 </div>{{!-- row end --}}
 
@@ -13,7 +13,7 @@
   {{outlet}}
 </div>
 
-
+<br>
 {{#each model.flashcards as |flashcard|}}
   {{#link-to 'lessons.lesson.flashcard' flashcard}}<img src="{{flashcard.thumbURL}}">{{/link-to}}
 {{/each}}

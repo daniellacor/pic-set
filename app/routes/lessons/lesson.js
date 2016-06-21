@@ -5,6 +5,9 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('lesson', params.lesson_id)
   }
+  afterModel() {
+    this.set('score', this.modelFor('score'))
+  }
   // model(params) {
     // return Ember.RSVP.hash({
       // lesson: this.store.findRecord('lesson', params.lesson_id),

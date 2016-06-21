@@ -46,11 +46,20 @@ export default Ember.Controller.extend({
           default:
             points += 0
       }
+      this.actions.score(points)
     },
     nextFlashcard() {
       debugger
       var thisId = this.get('model.id')
       isSnapped: false
+    },
+    score(points) {
+      var account = this.get('session.account.data')
+      var user_id = account.id
+      this.store.findRecord('user', user_id).then(function(user){
+        user.set('score', points);
+        user.save();
+      })
     }
   }
 })
