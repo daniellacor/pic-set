@@ -10,7 +10,7 @@
 </div>
 
 <div class="flashcard-container">
-  {{flashcard-container takePhotograph=(action 'judge') flashcard=model.flashcards}}
-  <button class="btn btn-primary" {{action 'nextFlashcard'}}>Next Flashcard</button>
+  {{flashcard-container takePhotograph=(action 'judge') flashcard=model.flashcards.get.firstObject}}
+  {{next-flashcard flashcardNext=(action 'advance') flashcard=model.flashcards}}
 </div>
 {{outlet}}

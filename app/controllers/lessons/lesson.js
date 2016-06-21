@@ -46,8 +46,10 @@ export default Ember.Controller.extend({
           default:
             points += 0
       }
-      this.toggleProperty('isSnapped');
       this.score(points);
+    },
+    advance() {
+      debugger
     }
   },
   score: function(points) {
@@ -57,6 +59,5 @@ export default Ember.Controller.extend({
         user.set('score', points);
         user.save();
       })
-  },
-  isSnapped: false
+    }
 });
