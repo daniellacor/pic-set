@@ -14,7 +14,7 @@ Router.map(function() {
   // })
   this.route('lessons', function() {
     this.route('lesson', { path: 'lesson/:lesson_id' }, function() {
-      this.route('flashcard', { path: 'flashcard/:flashcard_id'})
+      this.route('flashcard', {path: '/:flashcard_id'})
     })
   });
   this.route('user', { path: '/user/:user_id' });
