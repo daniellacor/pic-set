@@ -58,7 +58,6 @@ export default Ember.Controller.extend({
   score: function(points) {
       var account = this.get('session.account.data')
       var user_id = account.id
-      debugger
       this.store.findRecord('user', user_id).then(function(user){
         user.set('score', points);
         user.save();
