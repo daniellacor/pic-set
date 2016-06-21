@@ -1,6 +1,5 @@
 <div>
-  {{flashcard-container takePhotograph=(action 'judge') flashcard=model}}
-  <button class="btn btn-primary" {{action 'nextFlashcard'}}>Next Flashcard</button>
+  {{flashcard-container takePhotograph=(action 'judge') advanceFlashcard=(action 'advanceFlashcard') flashcard=model}}
 </div>
 
 {{outlet}}

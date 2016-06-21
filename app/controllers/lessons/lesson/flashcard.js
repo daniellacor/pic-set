@@ -2,7 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   session: Ember.inject.service('session-account'),
+  isSnapped: false,
   actions: {
+    advanceFlashcard() {
+      var thisId = this.get('model.id')
+      var nextId = Number.parseInt(thisId) + 1
+      this.transitionToRoute('lessons.lesson.flashcard', nextId)
+    },
     judge(settings) {
       var points = 0
       var shutterDiff = settings.userShutter - settings.shutter
@@ -46,12 +52,16 @@ export default Ember.Controller.extend({
           default:
             points += 0
       }
+      // this.score(points);
     },
-    nextFlashcard() {
+  },
+  score: function(points) {
+      var account = this.get('session.account.data')
+      var user_id = account.id
       debugger
-      var thisId = this.get('model.id')
-      var
-      isSnapped: false
+      this.store.findRecord('user', user_id).then(function(user){
+        user.set('score', points);
+        user.save();
+      })
     }
-  }
 })
