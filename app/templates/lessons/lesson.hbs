@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-sm-6">
-    <h1>{{lesson.topic}}</h1>
+    <h1>{{model.topic}}</h1>
     <p>Use the sliders to adjust the camera settings. Try to match what you think the picture settings were!</p>
   </div>
 
   <div class="col-sm-6">
-    {{score-board model=score }}
+    {{score-board model=model.scores }}
   </div>
 </div>{{!-- row end --}}
 
@@ -14,6 +14,6 @@
 </div>
 
 <br>
-{{#each lesson.flashcards as |flashcard|}}
+{{#each model.flashcards as |flashcard|}}
   {{#link-to 'lessons.lesson.flashcard' flashcard}}<img src="{{flashcard.thumbURL}}">{{/link-to}}
 {{/each}}

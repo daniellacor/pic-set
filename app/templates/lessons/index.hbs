@@ -2,7 +2,7 @@
   {{#each model as |lesson|}}
     <div class="lesson-container" id="{{lesson.topic}}">
       <h2>{{link-to lesson.topic 'lessons.lesson' lesson}}</h2>
-      <p>{{lesson.description}}</p>
+      <h4>{{lesson.description}}</h4>
     </div>
   {{/each}}
 </div>
