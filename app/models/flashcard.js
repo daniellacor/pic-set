@@ -4,9 +4,10 @@ import { hasMany, belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   imgURL: attr('string'),
+  thumbURL: attr('string'),
   shutterSpeed: attr('number'),
   aperture: attr('number'),
-  score: attr('number'),
+  points: attr('number'),
   lesson: belongsTo('lesson'),
   lightboxes: hasMany('lightbox')
 });

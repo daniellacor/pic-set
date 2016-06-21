@@ -46,6 +46,12 @@ export default Ember.Controller.extend({
           default:
             points += 0
       }
+    },
+    nextFlashcard() {
+      debugger
+      var thisId = this.get('model.id')
+      var
+      isSnapped: false
     }
   }
 })

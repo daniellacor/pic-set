@@ -11,6 +11,22 @@
         tooltip='hide'
         max=9
       }}
+    {{#if isSnapped}}
+      <div>
+        <h4>Actual Aperture:</h4>
+          {{ui-slider
+            value=flashcard.aperture
+            id='aperture-answer'
+            ticks='0,1,2,3,4,5,6,7,8,9'
+            ticksLabels='1.4, 2.0, 2.8, 4.0, 5.6, 8, 11, 16, 22, 32'
+            ticksSnapBounds=15
+            tooltip='hide'
+            max=9
+            mood="success"
+            disabled=true
+          }}
+      </div>
+    {{/if}}
     <h4>Shutter Speed: </h4>{{ui-slider
       id='shutter'
       ticks="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14"
@@ -18,6 +34,21 @@
       ticksSnapBounds=15
       tooltip='hide'
     }}
+    {{#if isSnapped}}
+      <div>
+        <h4>Acutal Shutter Speed: </h4>{{ui-slider
+          id='shutter-answer'
+          value=flashcard.shutterSpeed
+          ticks="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14"
+          ticksLabels="15 sec, 1, 1/2, 1/4, 1/8, 1/15, 1/30, 1/60, 1/125 ,1/250, 1/500, 1/1000, 1/2000, 1/4000, 1/8000"
+          ticksSnapBounds=15
+          tooltip='hide'
+          mood="success"
+          disabled=true
+        }}
+      </div>
+    {{/if}}
+
     {{input type="hidden" id="trueAperture" valueBinding=flashcard.aperture}}
     {{input type="hidden" id="trueShutterSpeed" valueBinding=flashcard.shutterSpeed}}
   {{input type='submit' value='Snap the photo!' class="btn btn-default"}}
@@ -25,32 +56,3 @@
   <br><br>
 </div>
 {{yield}}
-
-{{#if isSnapped}}
-<div>
-  <h3>Actual settings:</h3>
-    <h4>Aperture:</h4>
-      {{ui-slider
-        value=flashcard.aperture
-        id='aperture-answer'
-        ticks='0,1,2,3,4,5,6,7,8,9'
-        ticksLabels='1.4, 2.0, 2.8, 4.0, 5.6, 8, 11, 16, 22, 32'
-        ticksSnapBounds=15
-        tooltip='hide'
-        max=9
-        mood="success"
-        disabled=true
-      }}
-    <h4>Shutter Speed: </h4>{{ui-slider
-      id='shutter-answer'
-      value=flashcard.shutterSpeed
-      ticks="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14"
-      ticksLabels="15 sec, 1, 1/2, 1/4, 1/8, 1/15, 1/30, 1/60, 1/125 ,1/250, 1/500, 1/1000, 1/2000, 1/4000, 1/8000"
-      ticksSnapBounds=15
-      tooltip='hide'
-      mood="success"
-    }}
-  <br><br>
-  <br><br>
-</div>
-{{/if}}
