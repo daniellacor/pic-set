@@ -50,8 +50,11 @@
     {{/if}}
 
     {{input type="hidden" id="trueAperture" valueBinding=flashcard.aperture}}
-    {{input type="hidden" id="trueShutterSpeed" valueBinding=flashcard.shutterSpeed}}<br>
-  {{input type='submit' value='Snap the photo!' class="btn btn-default"}}
+    {{input type="hidden" id="trueShutterSpeed" valueBinding=flashcard.shutterSpeed}}
+  {{input type='submit' value='Snap the photo!' class="btn btn-default btn-lg"}}
+  {{#if isSnapped}}
+    <button class="btn btn-primary btn-lg" {{action 'nextFlashcard'}}>Next Flashcard</button>
+  {{/if}}
   </form>
   <br><br>
 </div>
