@@ -52,15 +52,16 @@ export default Ember.Controller.extend({
           default:
             points += 0
       }
-      // this.score(points);
+      // this.actions.score(points);
     },
-  },
-  score: function(points) {
-      var account = this.get('session.account.data')
-      var user_id = account.id
-      this.store.findRecord('user', user_id).then(function(user){
-        user.set('score', points);
-        user.save();
-      })
+    score: function(points) {
+      // this.scoreKeeper(points)
+      // var account = this.get('session.account.data')
+      // var user_id = account.id
+      // this.store.findRecord('user', user_id).then(function(user){
+        // user.set('score', points);
+        // user.save();
+      // })
     }
+  }
 })
