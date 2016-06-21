@@ -13,12 +13,6 @@
   {{outlet}}
 </div>
 
-
 {{#each model.flashcards as |flashcard|}}
   {{#link-to 'lessons.lesson.flashcard' flashcard}}<img src="{{flashcard.thumbURL}}">{{/link-to}}
 {{/each}}
-
-{{!-- <div class="flashcard-container">
-  {{flashcard-container takePhotograph=(action 'judge') flashcard=model.flashcards.get.firstObject}}
-  {{next-flashcard flashcardNext=(action 'advance') flashcard=model.flashcards}}
-</div> --}}

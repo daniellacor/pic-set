@@ -48,10 +48,6 @@ export default Ember.Controller.extend({
       }
       this.score(points);
     },
-    nextFlashcard() {
-      debugger
-      var thisId = this.get('model.id')
-    }
   },
   score: function(points) {
       var account = this.get('session.account.data')
