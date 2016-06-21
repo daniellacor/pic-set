@@ -1,8 +1,24 @@
-<div class="lessons-index">
+<!-- <div class="lessons-index">
   {{#each model as |lesson|}}
     <div class="lesson-container" id="{{lesson.topic}}">
       <h2>{{link-to lesson.topic 'lessons.lesson' lesson}}</h2>
       <p>{{lesson.description}}</p>
     </div>
+  {{/each}}
+</div> -->
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-3">References</h1><br>
+  {{#each model as |lesson|}}
+  {{#link-to 'lessons.lesson' lesson}}
+  <div class="lesson-container" id="{{lesson.topic}}">
+    <div class="lesson-link" id={{lesson.topic}}>
+      <div class="inner">
+        <h2>{{lesson.topic}}</h2>
+        <p class="lead">{{lesson.description}}</p><br>
+      </div>
+    </div>
+  </div>
+  {{/link-to}}
   {{/each}}
 </div>
