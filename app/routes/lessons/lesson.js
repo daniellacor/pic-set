@@ -24,5 +24,4 @@ export default Ember.Route.extend({
     controller.set('lesson', models.lesson);
     controller.set('score', models.score);
   }
-
 });
