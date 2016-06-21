@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row">
   <div class="col-sm-6">
     <h1>{{model.topic}}</h1>
@@ -17,3 +18,4 @@
 {{#each model.flashcards as |flashcard|}}
   {{#link-to 'lessons.lesson.flashcard' flashcard}}<img src="{{flashcard.thumbURL}}">{{/link-to}}
 {{/each}}
+</div>

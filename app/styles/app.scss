@@ -112,13 +112,32 @@ body {
   margin: 0 auto;
 }
 
+.lesson-link#Aperture{
+  background: url('https://cdn.photographylife.com/wp-content/uploads/2010/06/Delicate-Arch-Horizontal-Panorama.jpg');
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+}
+.lesson-link#Shutterspeed{
+  background: url('http://9622-presscdn-0-5.pagely.netdna-cdn.com/wp-content/uploads/2015/03/fast.jpg');
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+}
 
+.jumbotron.jumbotron-fluid{
+  padding: 0;
+}
 
-// #shutter-answer{
-// }
-
-// #score-board {
-//   height: 5px;
-//   width: 70px;
-//   margin-top: 17px;
+.inner{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.jumbotron a{
+  color: white;
+}
+//
+// .container{
+//   width: 100%;
+//   padding: 0;
 // }
